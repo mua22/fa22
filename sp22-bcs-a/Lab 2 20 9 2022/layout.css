@@ -1,0 +1,45 @@
+/* My First CSS */
+
+#menu{
+    list-style-type: none;
+}
+
+#menu .menu-link{
+    color: white;
+}
+
+#menu .menu-item{
+    /* border: 1px solid red; */
+    padding:7px;
+    /* margin:7px; */
+    display: inline;
+    background-color: darkgray;
+}
+
+#menu .menu-link:hover{
+    color:red;
+    
+}
+
+#image{
+    width:80px;
+    float: left;
+}
+
+p{
+    /* border:2px solid black; */
+    overflow: hidden;
+}
+
+div{
+    border:1px solid black;
+    margin:5px
+}
+
+#left{
+    float: left;
+    width: 10%
+}#right{
+    float: right;
+    width: 10%
+}
