@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tables</title>
+    <style>
+        th,td{
+            border:1px solid black;
+            padding: 5px;
+            text-align: center;
+        }
+        th{
+            background-color: black;
+            color:white
+        }
+        tr:nth-child(even){
+            background-color: gray;
+        }
+    </style>
+</head>
+<body>
+    <h1>Tables Example test</h1>
+    awesome
+    <table style="width:100%">
+        <caption>My table</caption>
+        <thead>
+            <tr>
+                <th style="width:200px">Name</th>
+                <th>email</th>
+                <th colspan="2">price</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td rowspan="2">Usman</td>
+                <td>my email</td>
+                <td>500</td>
+                <td>wow</td>
+            </tr><tr>
+                <td>Usman</td>
+                
+                <td>500</td>
+            </tr><tr>
+                <td>Usman</td>
+                <td>my email</td>
+                <td>500</td>
+            </tr><tr>
+                <td>Usman</td>
+                <td>my email</td>
+                <td>500</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

@@ -1,0 +1,39 @@
+#menu li{
+    display: inline;
+}
+#menu li:hover{
+    display: inline;
+    background-color: greenyellow;
+
+}
+
+div{
+    /* border: 1px solid black; */
+    padding: 10px;
+    margin:7px
+}
+
+#left{
+    float:right;
+    width:20%
+}#right{
+    float:right;
+    width:20%
+}
+
+#footer{
+    clear:both
+}
+#content{
+    overflow: hidden;
+}
+
+#hmenu{
+    list-style-type: none;
+}
+
+#hmenu li{
+    background-color: gray;
+    margin:4px;
+    padding: 3px
+}
