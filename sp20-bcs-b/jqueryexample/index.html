@@ -1,0 +1,25 @@
+<html>
+    <head></head>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+    <script src="myscript.js"></script>
+    <script>
+        console.log("Hello from script tag");
+    </script>
+    <style>
+        .green{border:3px solid green};
+        .red{border:3px solid red};
+    </style>
+    <body>
+        <h3>JQuery Example</h3>
+        <button id="testBtn" onclick="testClickHandler()">Click Me</button>
+
+        <div>
+            <input type="text" id="newTodo"> <button id="addBtn" onclick="addNewTodo();">Add New Todo</button>
+        </div>
+
+        <ul id="todos">
+            <li>Make Coffee</li>
+            <li>Go to Office</li>
+        </ul>
+    </body>
+</html>
