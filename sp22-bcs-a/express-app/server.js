@@ -4,11 +4,12 @@ const express = require("express");
 
 const app = express();
 app.use(express.static("public"));
-app.get("/contact-us.html", (req, res) => {
-  res.send("<h2>Contact Us</h2>");
+app.set("view engine", "ejs");
+app.get("/contact-us", (req, res) => {
+  res.render("contact-us");
 });
 app.get("/", (req, res) => {
-  res.send("<h1>Hello A Section with nodemon </h1>");
+  res.render("homepage");
 });
 app.listen(2000);
 

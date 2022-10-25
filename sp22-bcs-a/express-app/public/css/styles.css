@@ -1,2 +1,9 @@
 /* Hello A Section from css file */
 
+h1{
+    color:red;
+}
+
+#menu >li{
+    display:inline
+}
