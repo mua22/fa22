@@ -1,0 +1,12 @@
+<h2><%= pageTitle %></h2>
+<a class="btn btn-info" href="/games/add">Add New Game</a>
+<!-- How the games array will be available here -->
+
+<% for( let index = 0; index < games.length; index++ ) { %>
+<div>
+    <h3><%= games[index].title %></h3>
+    <a href="/games/delete/<%=games[index]._id  %>" class="btn btn-danger">Delete</a>
+    <a href="/games/edit/<%=games[index]._id  %>" class="btn btn-warning">Edit</a>
+    <p><%= games[index].description %></p>
+</div>
+<% } %>
