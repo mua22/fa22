@@ -1,0 +1,23 @@
+<h2><%= pageTitle %></h2>
+<a href="/cars/add" class="btn btn-info">Add New Car</a>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Make</th>
+            <th>Model</th>
+            <th>Variant</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        <% for( let index = 0; index < cars.length; index++ ) { %>
+            <tr>
+                <td><%=cars[index].make  %></td>
+                <td><%=cars[index].model  %></td>
+                <td><%=cars[index].variant  %></td>                
+                <td><a href="/cars/edit" class="btn btn-warning btn-sm">Edit</a></td>
+                <td><a href="/cars/edit" class="btn btn-danger btn-sm">Delete</a></td>
+            </tr>
+        <% } %>
+    </tbody>
+</table>
