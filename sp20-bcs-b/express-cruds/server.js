@@ -1,12 +1,16 @@
 const express = require("express");
 const mongoose = require("mongoose");
 var expressLayouts = require("express-ejs-layouts");
+var customLogger = require("./middlewares/logger");
 const app = express();
+app.use(customLogger);
 app.set("view engine", "ejs");
 app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
 app.use(expressLayouts);
 //add a router to our app
 app.use("/", require("./routes/site/cars"));
+app.use("/", require("./routes/api/cars"));
 app.get("/", (req, res) => {
   res.render("homepage");
 });
