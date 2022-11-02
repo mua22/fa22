@@ -15,8 +15,8 @@
                 <td><%=cars[index].make  %></td>
                 <td><%=cars[index].model  %></td>
                 <td><%=cars[index].variant  %></td>                
-                <td><a href="/cars/edit" class="btn btn-warning btn-sm">Edit</a></td>
-                <td><a href="/cars/edit" class="btn btn-danger btn-sm">Delete</a></td>
+                <td><a href="/cars/edit/<%=cars[index]._id  %>" class="btn btn-warning btn-sm">Edit</a></td>
+                <td><a href="/cars/delete/<%=cars[index]._id  %>" class="btn btn-danger btn-sm">Delete</a></td>
             </tr>
         <% } %>
     </tbody>
