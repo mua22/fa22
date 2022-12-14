@@ -13,7 +13,7 @@ const NavBar = () => {
         <a href="/cars">Cars WIth href</a>
       </li>
       <li>
-        <a>Login</a>
+        <Link to="/login">Login</Link>
       </li>
       <li>
         <a>Register</a>

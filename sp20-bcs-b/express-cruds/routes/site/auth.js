@@ -7,21 +7,22 @@ router.get("/login", async (req, res) => {
 });
 router.get("/logout", async (req, res) => {
   req.session.user = null;
+  req.flash("danger", "You Are Logged Out");
   return res.redirect("/login");
 });
 router.post("/login", async (req, res) => {
   let user = await User.findOne({ email: req.body.email });
   if (!user) {
-    // req.flash("danger", "User with this email not present");
+    req.flash("danger", "User with this email not present");
     return res.redirect("/login");
   }
   const validPassword = await bcrypt.compare(req.body.password, user.password);
   if (validPassword) {
     req.session.user = user;
-    // req.flash("success", "Logged in Successfully");
+    req.flash("success", "Logged in Successfully");
     return res.redirect("/");
   } else {
-    // req.flash("danger", "Invalid Password");
+    req.flash("danger", "Invalid Password");
     return res.redirect("/login");
   }
 });

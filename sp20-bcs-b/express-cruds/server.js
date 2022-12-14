@@ -1,13 +1,15 @@
 const express = require("express");
 const mongoose = require("mongoose");
-
+const cors = require("cors");
 var session = require("express-session");
 var cookieParser = require("cookie-parser");
 var expressLayouts = require("express-ejs-layouts");
 var customLogger = require("./middlewares/logger");
 var checkSessionAuth = require("./middlewares/checkSessionAuth");
 var sitemiddleware = require("./middlewares/sitemiddleware");
+var apiauth = require("./middlewares/apiauth");
 const app = express();
+app.use(cors());
 app.use(cookieParser());
 app.use(
   session({
@@ -31,7 +33,8 @@ app.use(
   require("./routes/site/cars")
 );
 
-app.use("/", require("./routes/api/cars"));
+app.use("/api/auth", require("./routes/api/auth"));
+app.use("/api/cars", apiauth, require("./routes/api/cars"));
 app.get("/", sitemiddleware, (req, res) => {
   res.render("homepage");
 });

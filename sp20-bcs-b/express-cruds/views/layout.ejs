@@ -45,6 +45,12 @@
           </div>
         </div>
       </nav>
+      <% if (flash) { %>
+        <div class="alert alert-<%-flash.type%>">
+          <%= flash.content %>
+        </div>
+      <% } %>
+      
     <%-body %>
 </body>
 </html>
