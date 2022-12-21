@@ -1,6 +1,8 @@
 import React from "react";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 const Login = () => {
+  const navigate = useNavigate();
   const [email, setEmail] = React.useState("usman.akram@gmail.com");
   const [password, setPassword] = React.useState("usman");
   return (
@@ -33,6 +35,8 @@ const Login = () => {
             .then((res) => {
               console.log(res.data);
               localStorage.setItem("token", res.data);
+              // navigate("/cars");
+              window.location.replace("/cars");
             })
             .catch((err) => {
               console.log(err);

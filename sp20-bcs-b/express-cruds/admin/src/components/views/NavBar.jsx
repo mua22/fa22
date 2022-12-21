@@ -12,15 +12,31 @@ const NavBar = () => {
       <li>
         <a href="/cars">Cars WIth href</a>
       </li>
-      <li>
-        <Link to="/login">Login</Link>
-      </li>
-      <li>
-        <a>Register</a>
-      </li>
-      <li>
-        <a>Logout</a>
-      </li>
+      {!localStorage.getItem("token") ? (
+        <>
+          <li>
+            <Link to="/login">Login</Link>
+          </li>
+          <li>
+            <a>Register</a>
+          </li>
+        </>
+      ) : (
+        <>
+          <li>
+            <a
+              href="/login"
+              onClick={(e) => {
+                e.preventDefault();
+                localStorage.setItem("token", "");
+                window.location.replace("/login");
+              }}
+            >
+              Logout
+            </a>
+          </li>
+        </>
+      )}
     </ul>
   );
 };
